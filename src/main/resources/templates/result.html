@@ -1,0 +1,13 @@
+<div lang="en" th:include="header"> </div>
+<body class="center">
+	<h1>Users Data</h1>
+    <a href="/">Submit another form</a>
+    <hr/>
+    <div class="listitem" th:each="user : ${userform}">
+    <p th:text="'Firstname: ' + ${user.firstname}" />
+    <p th:text="'Lastname: ' + ${user.lastname}" />
+    <p th:text="'Email: ' + ${user.email}" />
+    <p th:text="'Address: ' + ${user.address}" />
+    </div>
+</body>
+</html>
